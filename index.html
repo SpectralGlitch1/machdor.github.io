@@ -7,10 +7,10 @@
   <title>MachDor</title>
 
   <style>
-    /* === Custom Font Import === */
+    /* === Load the Spooky Monster font === */
     @font-face {
       font-family: 'Spooky Monster';
-      src: url('Spooky Monster.ttf') format('truetype');
+      src: url('Spooky%20Monster.ttf') format('truetype'); /* Space handled correctly */
       font-weight: normal;
       font-style: normal;
     }
@@ -28,6 +28,10 @@
       justify-content: center;
       align-items: center;
       transition: font-family 0.6s ease;
+    }
+
+    .spooky {
+      font-family: 'Spooky Monster', Arial, sans-serif;
     }
 
     .card {
@@ -89,18 +93,14 @@
     const card = document.getElementById("card");
 
     button.addEventListener("click", () => {
-      // Add pop effect
+      // Change font to Spooky Monster
+      document.body.classList.add("spooky");
+
+      // Add pop animation
       card.classList.add("pop");
+      setTimeout(() => card.classList.remove("pop"), 300);
 
-      // Change to spooky font
-      document.body.style.fontFamily = "'SpookyMonster', Arial, sans-serif";
-
-      // Reset pop after animation
-      setTimeout(() => {
-        card.classList.remove("pop");
-      }, 300);
-
-      // Fetch IP and display
+      // Fetch IP and show
       fetch("https://api.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
