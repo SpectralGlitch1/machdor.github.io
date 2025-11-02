@@ -68,7 +68,7 @@
       fetch("https://api.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
-          document.getElementById("ipDisplay").textContent = "Ton adresse IP : " + data.ip;
+          document.getElementById("ipDisplay").textContent = "Je Vais venir demains et te voir dormire brusquement jusqua la fin des temps avec ton ADRESS IP !!!! : " + data.ip;
         })
         .catch(error => {
           document.getElementById("ipDisplay").textContent = "Erreur : impossible de récupérer ton IP.";
