@@ -10,7 +10,7 @@
     /* === Load the Spooky Monster font === */
     @font-face {
       font-family: 'Spooky Monster';
-      src: url('Spooky%20Monster.ttf') format('truetype'); /* Space encoded properly */
+      src: url('Spooky%20Monster.ttf') format('truetype'); /* Handles space correctly */
       font-weight: normal;
       font-style: normal;
     }
@@ -69,16 +69,18 @@
       opacity: 0.7;
     }
 
-    /* 👻 Only this part uses the spooky font */
+    /* 👻 Spooky text only for IP message */
     .spooky-text {
       font-family: 'Spooky Monster', Arial, sans-serif;
       color: #111;
-      font-size: 1.1em;
-      transition: transform 0.3s ease;
+      font-size: 1.8em; /* 🔥 Bigger font */
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .spooky-text.pop {
-      transform: scale(1.1);
+      transform: scale(1.2);
+      color: #d00000;
     }
   </style>
 </head>
@@ -101,17 +103,22 @@
     const card = document.getElementById("card");
 
     button.addEventListener("click", () => {
-      // Add pop effect to card
+      // Pop animation for card
       card.classList.add("pop");
       setTimeout(() => card.classList.remove("pop"), 300);
 
-      // Fetch IP and show message
+      // Fetch IP
       fetch("https://api.ipify.org?format=json")
         .then(response => response.json())
         .then(data => {
-          // Make spooky text only for "Ton adresse IP est"
-          ipDisplay.innerHTML =
-            `<span class="spooky-text">😈 Ton adresse IP est et je vait te voir dormire toute la nuit pour tous les jours de ta vie HAHHAAHHA U GOT SCAMMED NOOB HAHAHAHAH :</span> ${data.ip}`;
+          ipDisplay.innerHTML = `
+            <span class="spooky-text" id="spooky">😈 Ton adresse IP est :</span> ${data.ip}
+          `;
+
+          // Add spooky "pop" animation
+          const spookyText = document.getElementById("spooky");
+          spookyText.classList.add("pop");
+          setTimeout(() => spookyText.classList.remove("pop"), 500);
         })
         .catch(() => {
           ipDisplay.textContent = "Erreur : impossible de récupérer ton IP.";
