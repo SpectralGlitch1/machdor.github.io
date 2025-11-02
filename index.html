@@ -55,11 +55,25 @@
   <div class="card">
     <h1>👋 Salut tous les machdoriens !</h1>
     <p>Bienvenue sur MACHDOR.</p>
-    <button onclick="window.location.href='https://github.com'">Clique sur ce bouton pas du tout suspecte</button>
+    <button id="ipButton">Afficher mon IP</button>
+    <p id="ipDisplay" style="margin-top:20px;font-weight:bold;"></p>
   </div>
 
   <footer>
     <p>Machdor , C'est La Vie</p>
   </footer>
+
+  <script>
+    document.getElementById("ipButton").addEventListener("click", () => {
+      fetch("https://api.ipify.org?format=json")
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("ipDisplay").textContent = "Ton adresse IP : " + data.ip;
+        })
+        .catch(error => {
+          document.getElementById("ipDisplay").textContent = "Erreur : impossible de récupérer ton IP.";
+        });
+    });
+  </script>
 </body>
 </html>
