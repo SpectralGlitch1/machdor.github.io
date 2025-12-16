@@ -1,129 +1,297 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <link rel="icon" href="icon.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MachDor</title>
+<html lang="en" dir="rtl"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://awlyaa.education.dz/public/assets/images/favicon.png?v=1.0.2">
+    <title>وزارة التربية الوطنية : فضاء أولياء التلاميذ</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="https://awlyaa.education.dz/public/assets/plugins/bootstrap/css/bootstrap.min.css?v=1.0.2" rel="stylesheet">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/bootstrap/css/bootstrap.min.css?v=1.0.2">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/DataTables/DataTables-1.10.21/css/dataTables.bootstrap.min.css?v=1.0.2">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/DataTables/Responsive-2.2.5/css/responsive.bootstrap.min.css?v=1.0.2">
 
-  <style>
-    /* === Load the Spooky Monster font === */
-    @font-face {
-      font-family: 'Spooky Monster';
-      src: url('Spooky%20Monster.ttf') format('truetype'); /* Handles space correctly */
-      font-weight: normal;
-      font-style: normal;
-    }
+    <link href="https://awlyaa.education.dz/public/assets/plugins/icheck/skins/all.css?v=1.0.2" rel="stylesheet">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/select2/css/select2.css?v=1.0.2">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/sweetalert/sweetalert2.min.css?v=1.0.2">
+    <link rel="stylesheet" href="https://awlyaa.education.dz/public/assets/plugins/bootstrap-select2/select2-bootstrap4.min.css?v=1.0.2">
+    <!-- Custom CSS -->
+    <link href="https://awlyaa.education.dz/public/assets/css/style.css?v=1.0.2" id="theme" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="https://awlyaa.education.dz/public/assets/plugins/formvalidation/css/formValidation.min.css?v=1.0.2" rel="stylesheet" type="text/css">
 
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    <link href="https://awlyaa.education.dz/public/assets/css/colors/blue.css?v=1.0.2" id="theme" rel="stylesheet">
+ 
+    <!-- ============================================================== -->
+    <script src="https://awlyaa.education.dz/public/assets/plugins/jquery/jquery-3.4.1.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/jqueryvalidate/jquery.validate.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/jqueryvalidate/additional-methods.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/DataTables-1.10.21/js/jquery.dataTables.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/DataTables-1.10.21/js/dataTables.bootstrap.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/Buttons-1.6.2/js/dataTables.buttons.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/Buttons-1.6.2/js/buttons.print.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/Buttons-1.6.2/js/buttons.html5.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/Responsive-2.2.5/js/dataTables.responsive.min.js?v=1.0.2" type="text/javascript"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/DataTables/Responsive-2.2.5/js/responsive.bootstrap.min.js?v=1.0.2" type="text/javascript"></script>
+	
+	<link href="https://awlyaa.education.dz/public/assets/plugins/smartwizard/smart_wizard_all.min.css?v=1.0.2" rel="stylesheet">
+    <script src="https://awlyaa.education.dz/public/assets/plugins/smartwizard/jquery.smartWizard.min.js?v=1.0.2"></script>
 
-    .card {
-      background: white;
-      color: #333;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      max-width: 400px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="https://awlyaa.education.dz/public/assets/plugins/bootstrap/js/popper.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/bootstrap/js/bootstrap.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/sweetalert/sweetalert2.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/js/jquery.slimscroll.js?v=1.0.2"></script>
+    <!--Wave Effects -->
+    <script src="https://awlyaa.education.dz/public/assets/js/waves.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/js/axios.min.js?v=1.0.2"></script>
+    <!--stickey kit -->
+    <script src="https://awlyaa.education.dz/public/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/sparkline/jquery.sparkline.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/formvalidation/js/formValidation.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/formvalidation/js/plugins/Bootstrap.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/jquery-inputmask/jquery.inputmask.bundle.js?V1_0%3Fv=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/icheck/icheck.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/icheck/icheck.init.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/select2/js/select2.min.js?v=1.0.2"></script>
+    <script src="https://awlyaa.education.dz/public/assets/plugins/styleswitcher/jQuery.style.switcher.js?v=1.0.2"></script>
+    <!--Custom JavaScript -->
+    <script src="https://awlyaa.education.dz/public/assets/js/parent.js?v=1.0.2"></script>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 
-    .card.pop {
-      transform: scale(1.1);
-    }
+<body class="fix-header card-no-border">
+<div id="preloader" style="display: none;">
+    <div id="loader"></div>
+    <div id="text_loader" class="text-center text-success">الرجاء اﻹنتظار...</div>
+</div>
 
-    h1 {
-      font-size: 2em;
-    }
+<div id="main-wrapper">
+    <!-- change password Model -->
+<style>
+label.error {
+    color: red;
+    display: block;
+}
+</style>
+<div class="modal animated rotateInDownLeft" data-backdrop="static" data-keyboard="false" id="change_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card card-outline-info">
+                <div class="card-header">
+                    <h6 class="m-b-0 text-white text-center">تغيير كلمة المرور</h6>
+                </div>
+                <div class="modal-body">
+                    <div id="ErrorMsg"></div>
+                    <form method="post" id="change_it">
+                        <div class="form-group" id="currentPass-group">
+                            <label for="current_pass">كلمة المرور الحالية :</label>
+                            <input class="form-control" type="password" name="current_pass" id="current_pass" autocomplete="off" readonly="" onfocus="this.removeAttribute('readonly');">
+                        </div>
+                        <div class="form-group">
+                            <label for="new_pass">كلمة المرور الجديدة:</label>
+                            <input class="form-control" type="password" name="new_pass" id="new_pass" autocomplete="off" readonly="" onfocus="this.removeAttribute('readonly');">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_pass">تأكيد كلمة المرور الجديدة :</label>
+                            <input class="form-control" type="password" name="confirm_pass" id="confirm_pass" autocomplete="off" readonly="" onfocus="this.removeAttribute('readonly');">
+                            <div id="popover-password">
+                                <p>كلمة المرور : <span id="result"> </span></p>
+                                <div class="progress">
+                                    <div id="password-strength" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class=""><span class="low-upper-case"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; على الأقل حرف صغير و آخر كبير
+                                        باللاتينية
+                                    </li>
+                                    <li class=""><span class="one-number"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;على الأقل رقم واحد بين (0-9)</li>
+                                    <li class=""><span class="one-special-char"><i class="fa fa-file-text" aria-hidden="true"></i></span> &nbsp;على الأقل رمز واحد من بين
+                                        (!@#$%^&amp;*).</li>
+                                    <li class=""><span class="eight-character"><i class="fa fa-file-text" aria-hidden="true"></i></span>&nbsp; على اﻷقل 8 أحرف</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="submit" class="btn btn-outline-success btn-rounded" id="submitForm">تأكيد التعديلات</button>
+                            <button type="button" class="btn btn-outline-danger btn-rounded" data-dismiss="modal">إلغاء</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: 0.3s;
-    }
 
-    button:hover {
-      background: #1e40af;
-    }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      opacity: 0.7;
-    }
 
-    /* 👻 Spooky text only for IP message */
-    .spooky-text {
-      font-family: 'Spooky Monster', Arial, sans-serif;
-      color: #111;
-      font-size: 1.8em; /* 🔥 Bigger font */
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
+<header class="topbar is_stuck" style="position: fixed; top: 0px; width: 135px;">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                
+                <span style="display: none;">
+                    <img src="https://awlyaa.education.dz/public/assets/images/logo_white.png?v=1.0.2" class="light-logo" alt="homepage"></span> </a>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-md-0 text-center">
+            </ul>
+			            <ul class="navbar-nav my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="mdi mdi-message"></i>
+                        <span id="noty-counts" class="notify-badge badge-default badge-warning point">0</span>
+                    </a>
+                    <div class="dropdown-menu mailbox dropdown-menu-right scale-up" aria-labelledby="2">
+                        <ul>
+                            <li>
+                                <div class="drop-title">لديك إشعارات</div>
+                            </li>
+                            <li style="overflow: visible;">
+                                <div class="slimScrollDiv" style="position: relative; overflow: visible hidden; width: auto; height: 250px;"><div class="message-center" style="overflow: hidden; width: auto; height: 250px;">
+                                                                    </div><div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 250px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                            </li>
+                                                    </ul>
+                    </div>
+                </li>
+                <!-- ============================================================== -->
+                <!-- Profile -->
+                <!-- ============================================================== -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://awlyaa.education.dz/public/assets/images/favicon.ico?v=1.0.2" alt="حسابي " class="profile-pic"> مجاهد جعفر</a>
+                    <div class="dropdown-menu dropdown-menu-right scale-up">
+                        <ul class="dropdown-user">
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="ti-user"></i> بروفايلي</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a data-toggle="modal" data-target="#change_password"><i class="ti-settings"></i> تغيير كلمة المرور</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://awlyaa.education.dz/totp"><i class="ti-lock"></i> المصادقة الثنائية</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="logout"><i class="fa fa-power-off"></i> تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    .spooky-text.pop {
-      transform: scale(1.2);
-      color: #d00000;
-    }
-  </style>
-</head>
+    </nav>
+</header><div style="position: relative; width: 135px; height: 116px; display: block; vertical-align: baseline; float: none;"></div>
+    <div class="container-fluid">
+            <div class="card">
+    <div id="bc1" class="btn-group btn-breadcrumb">
+        <a href="dashboard" class="btn btn-default text-success"><i class="fa fa-home"></i></a>
+        <a href="#" class="btn btn-default text-danger">
+            <div>نتائج أبنائي</div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card" style="cursor: pointer;">
+            <div class="card-body">
+                <div class="tab-content tabcontent-border">
+                    <div class="tab-pane active" role="tabpanel">
+                            <div class="table-responsive m-t-40">
+                            <div id="eleves_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="eleves" data-mobile-responsive="true" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="eleves_info">
+                                <thead>
+                                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="eleves" rowspan="1" colspan="1" style="width: 149px;" aria-label="معلومات التلميذ: activate to sort column descending" aria-sort="ascending">معلومات التلميذ</th><th class="sorting_1 sorting" tabindex="0" aria-controls="eleves" rowspan="1" colspan="1" style="width: 45px;" aria-label="العمليات: activate to sort column ascending">العمليات</th></tr>
+                                </thead>
+                                <tbody>
+                                <tr role="row" class="odd"><td class="sorting_1 dtr-control">    <div class="row">
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <div class="card-header bg-info text-light">معلومات التلميذ</div>
+        <div class="card-body">
+          <h6 class="card-title">رقم التعريف المدرسي <br><br> <span class="text-info">1001116400072000</span></h6>
+          <p class="card-text"></p><hr><b>
+            التلميذ : <span class="text-info">مجاهد مهدي </span>
+          </b><p></p>
+          <a href="#" class="btn btn-primary">مفعل</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <div class="card-header bg-info text-light">معلومات التمدرس</div>
+        <div class="card-body">
+          <h6 class="card-title"> المؤسسة: متوسطة  الشهيد عيسات إيدير -بومرداس <hr> الفوج التربوي : رابعة  متوسط     2</h6>
+          <p class="text-info"><b>
+           معدل الفصل الأول =  <br> معدل الفصل الثاني =  <br>  معدل الفصل الثالث =  <br>
+           المعدل السنوي = <br> 
+            </b> </p>
+        </div>
+      </div>
+    </div>
+    </div></td><td class=" sorting_1">
+            <button class="btn btn-sm btn-outline-success btn-rounded" href="" data-toggle="dropdown" aria-expanded="false">
+           تفاصيل النقاط المحصل عليها
+            </button>
+            <div class="dropdown-menu scale-up">
+                <ul class="dropdown-user">
+                    <li><button class="btn btn-xs btn-info" onclick="bulletin('35041','1001116400072000','1')"> الفصل اﻷول</button></li>
+                    <li><button class="btn btn-xs btn-warning" onclick="bulletin('35041','1001116400072000','2')">الفصل الثاني </button></li>
+                    <li><button class="btn btn-xs btn-danger" onclick="bulletin('35041','1001116400072000','3')">الفصل الثالث</button></li>
+                </ul>
+            </div>
+            </td></tr><tr role="row" class="even"><td class="sorting_1 dtr-control">    <div class="row">
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <div class="card-header bg-info text-light">معلومات التلميذ</div>
+        <div class="card-body">
+          <h6 class="card-title">رقم التعريف المدرسي <br><br> <span class="text-info">1100835010101000</span></h6>
+          <p class="card-text"></p><hr><b>
+            التلميذ : <span class="text-info">مجاهد سلمى </span>
+          </b><p></p>
+          <a href="#" class="btn btn-primary">مفعل</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <div class="card-header bg-info text-light">معلومات التمدرس</div>
+        <div class="card-body">
+          <h6 class="card-title"> المؤسسة: ثانوية  محمد العيد أل خليفة -بومرداس <hr> الفوج التربوي : ثالثة  ثانوي  علوم تجريبية    3</h6>
+          <p class="text-info"><b>
+           معدل الفصل الأول =  <br> معدل الفصل الثاني =  <br>  معدل الفصل الثالث =  <br>
+           المعدل السنوي = <br> 
+            </b> </p>
+        </div>
+      </div>
+    </div>
+    </div></td><td class=" sorting_1">
+            <button class="btn btn-sm btn-outline-success btn-rounded" href="" data-toggle="dropdown" aria-expanded="false">
+           تفاصيل النقاط المحصل عليها
+            </button>
+            <div class="dropdown-menu scale-up">
+                <ul class="dropdown-user">
+                    <li><button class="btn btn-xs btn-info" onclick="bulletin('35041','1100835010101000','1')"> الفصل اﻷول</button></li>
+                    <li><button class="btn btn-xs btn-warning" onclick="bulletin('35041','1100835010101000','2')">الفصل الثاني </button></li>
+                    <li><button class="btn btn-xs btn-danger" onclick="bulletin('35041','1100835010101000','3')">الفصل الثالث</button></li>
+                </ul>
+            </div>
+            </td></tr></tbody>
+                            </table><div id="eleves_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="eleves_info" role="status" aria-live="polite"></div></div><div class="col-sm-7"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://awlyaa.education.dz/public/assets/js/resultats.js?V1_2%3Fv=1.0.2"></script>
+<script src="https://awlyaa.education.dz/public/assets/js/jsonToTable.js?v=1.0.2"></script>    </div>
+</div>
+<script src="https://awlyaa.education.dz/public/assets/js/notifications.js?v=1.0.2"></script>
+<footer class="footer">
+  <marquee direction="right">
+    <p> وزارة التربية الوطنية جميع الحقوق محفوظة © 2025 </p>
+  </marquee>
+</footer>
 
-<body>
-  <div class="card" id="card">
-    <h1>👋 Salut tous les machdoriens !</h1>
-    <p>Bienvenue sur MACHDOR.</p>
-    <button id="ipButton">Clique sur ce bouton pas du tout suspect :)</button>
-    <p id="ipDisplay" style="margin-top:20px;font-weight:bold;"></p>
-  </div>
 
-  <footer>
-    <p>Machdor, C'est La Vie. Copyright © 2025 MachDor Inc.</p>
-  </footer>
 
-  <script>
-    const button = document.getElementById("ipButton");
-    const ipDisplay = document.getElementById("ipDisplay");
-    const card = document.getElementById("card");
-
-    button.addEventListener("click", () => {
-      // Pop animation for card
-      card.classList.add("pop");
-      setTimeout(() => card.classList.remove("pop"), 300);
-
-      // Fetch IP
-      fetch("https://api.ipify.org?format=json")
-        .then(response => response.json())
-        .then(data => {
-          ipDisplay.innerHTML = `
-            <span class="spooky-text" id="spooky">😈 Ton adresse IP est :</span> ${data.ip}
-          `;
-
-          // Add spooky "pop" animation
-          const spookyText = document.getElementById("spooky");
-          spookyText.classList.add("pop");
-          setTimeout(() => spookyText.classList.remove("pop"), 500);
-        })
-        .catch(() => {
-          ipDisplay.textContent = "Erreur : impossible de récupérer ton IP.";
-        });
-    });
-  </script>
-</body>
-</html>
+</body></html>
