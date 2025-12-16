@@ -181,109 +181,151 @@ label.error {
     </nav>
 </header><div style="position: relative; width: 135px; height: 116px; display: block; vertical-align: baseline; float: none;"></div>
     <div class="container-fluid">
-            <div class="card">
-    <div id="bc1" class="btn-group btn-breadcrumb">
-        <a href="dashboard" class="btn btn-default text-success"><i class="fa fa-home"></i></a>
-        <a href="#" class="btn btn-default text-danger">
-            <div>نتائج أبنائي</div>
-        </a>
+            <style>
+.swal2-popup{
+	width:52em;
+}
+</style>
+<div class="card-header">
+
+    <div class="alert alert-danger" role="alert"> <strong>
+            . ملاحظة هامة : لا يتم استظهار نتائج التلاميذ الذين لم يتم تفعيلهم من طرف مدير المؤسسة التي يدرسون بها
+        </strong>
     </div>
-</div>
-<div class="row">
-    <div class="col-12">
-        <div class="card" style="cursor: pointer;">
-            <div class="card-body">
-                <div class="tab-content tabcontent-border">
-                    <div class="tab-pane active" role="tabpanel">
-                            <div class="table-responsive m-t-40">
-                            <div id="eleves_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="eleves" data-mobile-responsive="true" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="eleves_info">
-                                <thead>
-                                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="eleves" rowspan="1" colspan="1" style="width: 149px;" aria-label="معلومات التلميذ: activate to sort column descending" aria-sort="ascending">معلومات التلميذ</th><th class="sorting_1 sorting" tabindex="0" aria-controls="eleves" rowspan="1" colspan="1" style="width: 45px;" aria-label="العمليات: activate to sort column ascending">العمليات</th></tr>
-                                </thead>
-                                <tbody>
-                                <tr role="row" class="odd"><td class="sorting_1 dtr-control">    <div class="row">
-    <div class="col-lg-6">
-      <div class="card text-center">
-        <div class="card-header bg-info text-light">معلومات التلميذ</div>
-        <div class="card-body">
-          <h6 class="card-title">رقم التعريف المدرسي <br><br> <span class="text-info">1001116400072000</span></h6>
-          <p class="card-text"></p><hr><b>
-            التلميذ : <span class="text-info">مجاهد مهدي </span>
-          </b><p></p>
-          <a href="#" class="btn btn-primary">مفعل</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="card text-center">
-        <div class="card-header bg-info text-light">معلومات التمدرس</div>
-        <div class="card-body">
-          <h6 class="card-title"> المؤسسة: متوسطة  الشهيد عيسات إيدير -بومرداس <hr> الفوج التربوي : رابعة  متوسط     2</h6>
-          <p class="text-info"><b>
-           معدل الفصل الأول =  <br> معدل الفصل الثاني =  <br>  معدل الفصل الثالث =  <br>
-           المعدل السنوي = <br> 
-            </b> </p>
-        </div>
-      </div>
-    </div>
-    </div></td><td class=" sorting_1">
-            <button class="btn btn-sm btn-outline-success btn-rounded" href="" data-toggle="dropdown" aria-expanded="false">
-           تفاصيل النقاط المحصل عليها
-            </button>
-            <div class="dropdown-menu scale-up">
-                <ul class="dropdown-user">
-                    <li><button class="btn btn-xs btn-info" onclick="bulletin('35041','1001116400072000','1')"> الفصل اﻷول</button></li>
-                    <li><button class="btn btn-xs btn-warning" onclick="bulletin('35041','1001116400072000','2')">الفصل الثاني </button></li>
-                    <li><button class="btn btn-xs btn-danger" onclick="bulletin('35041','1001116400072000','3')">الفصل الثالث</button></li>
-                </ul>
-            </div>
-            </td></tr><tr role="row" class="even"><td class="sorting_1 dtr-control">    <div class="row">
-    <div class="col-lg-6">
-      <div class="card text-center">
-        <div class="card-header bg-info text-light">معلومات التلميذ</div>
-        <div class="card-body">
-          <h6 class="card-title">رقم التعريف المدرسي <br><br> <span class="text-info">1100835010101000</span></h6>
-          <p class="card-text"></p><hr><b>
-            التلميذ : <span class="text-info">مجاهد سلمى </span>
-          </b><p></p>
-          <a href="#" class="btn btn-primary">مفعل</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="card text-center">
-        <div class="card-header bg-info text-light">معلومات التمدرس</div>
-        <div class="card-body">
-          <h6 class="card-title"> المؤسسة: ثانوية  محمد العيد أل خليفة -بومرداس <hr> الفوج التربوي : ثالثة  ثانوي  علوم تجريبية    3</h6>
-          <p class="text-info"><b>
-           معدل الفصل الأول =  <br> معدل الفصل الثاني =  <br>  معدل الفصل الثالث =  <br>
-           المعدل السنوي = <br> 
-            </b> </p>
-        </div>
-      </div>
-    </div>
-    </div></td><td class=" sorting_1">
-            <button class="btn btn-sm btn-outline-success btn-rounded" href="" data-toggle="dropdown" aria-expanded="false">
-           تفاصيل النقاط المحصل عليها
-            </button>
-            <div class="dropdown-menu scale-up">
-                <ul class="dropdown-user">
-                    <li><button class="btn btn-xs btn-info" onclick="bulletin('35041','1100835010101000','1')"> الفصل اﻷول</button></li>
-                    <li><button class="btn btn-xs btn-warning" onclick="bulletin('35041','1100835010101000','2')">الفصل الثاني </button></li>
-                    <li><button class="btn btn-xs btn-danger" onclick="bulletin('35041','1100835010101000','3')">الفصل الثالث</button></li>
-                </ul>
-            </div>
-            </td></tr></tbody>
-                            </table><div id="eleves_processing" class="dataTables_processing panel panel-default" style="display: none;">Processing...</div></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="eleves_info" role="status" aria-live="polite"></div></div><div class="col-sm-7"></div></div></div>
-                        </div>
+    <div class="row">
+        <a class="col-lg-4 col-md-4" href="atfal">
+            <div class="ribbon-wrapper-reverse card">
+                <div class="ribbon ribbon-corner ribbon-success"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-success"><i class="fa fa-child"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-success">تسجيل الأطفال</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">تسجيلات الأطفال، تحضيري أولى ابتدائي، تسجيل إستثنائي</h6>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
+		
+        <a class="col-lg-4 col-md-4" href="mes_eleves">
+            <div class="ribbon-wrapper-reverse card" style="cursor: pointer;">
+                <div class="ribbon ribbon-corner ribbon-success"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-success"><i class="fa fa-child"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-success">أبنائي المتمدرسين</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">قائمة أبنائي المسجلين</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Column -->
+        <a class="col-lg-4 col-md-4" href="resultats">
+            <div class="ribbon-wrapper-reverse card" style="cursor: pointer;">
+                <div class="ribbon ribbon-corner ribbon-danger"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-danger"><i class="fa fa-stack-exchange"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-danger">نتائج أبنائي</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">كشوف نقاط أبنائي </h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Column -->
+        <a class="col-lg-4 col-md-4" href="examens">
+            <div class="ribbon-wrapper-reverse card">
+                <div class="ribbon ribbon-corner ribbon-warning"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-warning"><i class=" ti-gift"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-warning">اﻹمتحانات الرسمية</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">متابعة الإمتحانات الرسمية</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Column -->
+        <a class="col-lg-4 col-md-4" href="#">
+            <div class="ribbon-wrapper-reverse card" style="cursor: pointer;">
+                <div class="ribbon ribbon-corner ribbon-danger"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-danger"><i class=" fa fa-bell"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-danger"> غيابات أبنائي</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">متابعة الغيابات اليومية</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Column -->
+        <a class="col-lg-4 col-md-4" href="tahwilat">
+            <div class="ribbon-wrapper-reverse card">
+                <div class="ribbon ribbon-corner ribbon-info"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-info"><i class=" fa fa-send"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-info"> طلبات التحويل</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">متابعة طلب التحويل</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+      
+        <a class="col-lg-4 col-md-4" href="https://onps.dz/" target="_blank">
+            <div class="ribbon-wrapper-reverse card">
+                <div class="ribbon ribbon-corner ribbon-warning"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-warning"><i class="fa fa-book"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-warning">شراء الكتاب المدرسي</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">منصة البيع الالكتروني للكتاب المدرسي باستخدام البطاقة الذهبية أو الحوالة البريدية</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="col-lg-4 col-md-4" href="idmadj">
+            <div class="ribbon-wrapper-reverse card" style="cursor: pointer;">
+                <div class="ribbon ribbon-corner ribbon-info"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-info"><i class="fa fa-repeat"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-info">إعادة إدماج</h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">طلب إعادة إدماج أبنائي </h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Column -->
+        <a class="col-lg-4 col-md-4" href="orientation">
+            <div class="ribbon-wrapper-reverse card" style="cursor: pointer;">
+                <div class="ribbon ribbon-corner ribbon-danger"><i class="fa fa-check-circle"></i></div>
+                <div class="d-flex flex-row">
+                    <div class="round align-self-center round-danger"><i class="fa fa-users"></i></div>
+                    <div class="m-l-10 align-self-center">
+                        <h5 class="text-center text-danger">التوجيه/إعادة التوجيه والطعون </h5>
+                        <hr class="m-4">
+                        <h6 class="text-center">توجيه التلاميذ للتخصصات المناسبة حسب قدراتهم العلمية</h6>
+                    </div>
+                </div>
+            </div>
+        </a>		
+		
     </div>
 </div>
-<script src="https://awlyaa.education.dz/public/assets/js/resultats.js?V1_2%3Fv=1.0.2"></script>
-<script src="https://awlyaa.education.dz/public/assets/js/jsonToTable.js?v=1.0.2"></script>    </div>
+
+
+		
+	
+    </div>
 </div>
 <script src="https://awlyaa.education.dz/public/assets/js/notifications.js?v=1.0.2"></script>
 <footer class="footer">
